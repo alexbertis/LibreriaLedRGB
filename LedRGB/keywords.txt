@@ -1,0 +1,9 @@
+LedRGB	KEYWORD1
+ponerColor	KEYWORD2
+colorPredefinido	KEYWORD2
+sumar	KEYWORD2
+restar	KEYWORD2
+testear	KEYWORD2
+apagar	KEYWORD2
+efectoFlash	KEYWORD2
+efectoFade	KEYWORD2
