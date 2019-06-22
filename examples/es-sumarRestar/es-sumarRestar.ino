@@ -1,5 +1,5 @@
 /* 
- * sumarRestar.ino - Usando la librería LedRGB de Alejandro Bertinelli
+ * es-sumarRestar.ino - Usando la librería LedRGB
  * Usa las funciones "sumar" y "restar" de la librería, que necesitan parámetros RGB:
  * - 200ms BLANCO (SÓLO AL PRINCIPIO)
  * 
@@ -13,15 +13,14 @@
  * Por Alejandro Bertinelli
  * 
  * Escrito el 29 de Junio de 2017
- * Última actualización el 29 de Junio de 2017
+ * Última actualización el 22 de Junio de 2019
  */
  
 /*
- * LICENCIAS:
- * http://www.apache.org/licenses/LICENSE-2.0
+ * LICENCIA MIT License 3.0
  */
 #include <LedRGB.h>
-LedRGB miLED(9, 10, 11, 1);
+LedRGB miLED(9, 10, 11, CC);
 
 void setup() {
   miLED.ponerColor(255, 255, 255);  //  Al principio ponemos el color a blanco
@@ -29,7 +28,7 @@ void setup() {
 }
 
 void loop() {
-  // Usamos la función "restar", que prueba que el Rojo, Verde y Azul funcionen correctamente
+  // Usamos la función "restar"
   miLED.restar(0, 0, 255);    //  Restamos 0 a R, 0 a G, y 255 a B
   delay(700);                 //  Esperamos 700ms así
   miLED.restar(255, 0, 0);    //  Restamos 255 a R, 0 a G, y 0 a B

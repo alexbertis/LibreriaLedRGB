@@ -177,5 +177,5 @@ void LedRGB::efectoFade(int fR, int fG, int fB){
 }
 
 void LedRGB::fadeEffect(int fR, int fG, int fB){
-	efectoFade(fR, fG, fB)
+	efectoFade(fR, fG, fB);
 }

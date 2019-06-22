@@ -1,5 +1,5 @@
 /* 
- * funcionTestear.ino
+ * es-funcionTestear.ino
  * Prueba todos los diodos R, G y B del LED:
  * -300ms ROJO
  * -300ms VERDE
@@ -9,15 +9,14 @@
  * Por Alejandro Bertinelli
  * 
  * Escrito el 29 de Junio de 2017
- * Última actualización el 29 de Junio de 2017
+ * Última actualización el 22 de Junio de 2019
  */
  
 /*
- * LICENCIAS:
- * http://www.apache.org/licenses/LICENSE-2.0
+ * LICENCIA MIT License 3.0
  */
 #include <LedRGB.h>
-LedRGB miLED(9, 10, 11, 1);
+LedRGB miLED(9, 10, 11, CC);
 
 void setup() {
 
