@@ -73,6 +73,8 @@ void LedRGB::colorPredefinido(String color){
 		ponerColor(176, 54, 72);
 	}else if(_color == "fucsia"){
 		ponerColor(255, 0, 255);
+	}else{
+		ponerColor(0, 0, 0);
 	}
 }
 void LedRGB::defaultColor(String color){
@@ -99,6 +101,8 @@ void LedRGB::defaultColor(String color){
 		ponerColor(176, 54, 72);
 	}else if(_color == "fuchsia"){
 		ponerColor(255, 0, 255);
+	}else{
+		ponerColor(0, 0, 0);
 	}
 }
 
