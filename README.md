@@ -19,6 +19,7 @@ We are using a custom object, named `LedRGB`. Next, we need to declare a new obj
 ### Functions in the library
 
 - `setColor(redValue, greenValue, blueValue);` sets the values from 0 to 255 for each of the three colors.
+- `defaultColor(colorName);` chooses among different color Strings, e.g. `"white"` or `"yellow"`. If the color you write is not supported, the LED will be set to black.
 - `add(addRed, addGreen, addBlue);` adds the specified value to the current one in the LED, up to 255.
 - `substract(subRed, subGreen, subBlue);` substracts the specified value, all the way down to 0.
 - `off();` sets every value to 0.
@@ -41,6 +42,7 @@ El objeto que utilizaremos será de tipo `LedRGB`. A continuación deberemos def
 ### Funciones de la librería
 
 - `ponerColor(valorRojo, valorVerde, valorAzul);` asigna los valores de 0 a 255 para cada uno de los tres colores.
+- `colorPredefinido(nombreDelColor);` acepta algunos Strings de colores, como `"blanco"` or `"amarillo"`. Si el color que introduces no está en nuestra lista, el LED se pondrá negro.
 - `sumar(sumarRojo, sumarVerde, sumarAzul);` suma el valor dado al valor actual del LED (hasta llegar a 255).
 - `restar(quitarRojo, quitarVerde, quitarAzul);` resta desde el valor al que está puesto el LED (hasta llegar a cero).
 - `apagar();` pone todos los valores a cero.
