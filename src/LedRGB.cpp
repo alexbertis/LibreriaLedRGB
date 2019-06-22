@@ -1,15 +1,14 @@
 /*
-LedRGB.cpp - Librería para encender LEDs RGB con Arduino
-Creada por Alejandro Bertinelli, el 27 de Junio de 2017
-Modificada el 28 de Junio de 2017
-Versión 0.1.3
-Lanzado bajo licencia---
+LedRGB.cpp - Easy to use RGB LEDs with Arduino
+Created by Alejandro Bertinelli, 27-06-2017
+Modified 22-06-2019
+Version 1.0.0
 */
 
 #include <arduino.h>
 #include <LedRGB.h>
 
-LedRGB::LedRGB(int pinR, int pinG, int pinB, int modo)
+LedRGB::LedRGB(int pinR, int pinG, int pinB, int mode)
 {
 	_pinR = pinR;
 	_pinG = pinG;
@@ -17,7 +16,7 @@ LedRGB::LedRGB(int pinR, int pinG, int pinB, int modo)
 	pinMode(_pinR, OUTPUT);
 	pinMode(_pinG, OUTPUT);
 	pinMode(_pinB, OUTPUT);
-	_modo = modo;
+	_modo = mode;
 }
 void LedRGB::ponerColor(int CR, int CG, int CB){
 	_CR = CR;
@@ -29,6 +28,10 @@ void LedRGB::ponerColor(int CR, int CG, int CB){
 		ponerColorCC(_CR, _CG, _CB);
 	}
 }
+void LedRGB::setColor(int CR, int CG, int CB){
+	ponerColor(CR, CG, CB);
+}
+
 void LedRGB::ponerColorCA(int crA, int cgA, int cbA){
 	_crA = crA;
 	_cgA = cgA;
@@ -72,6 +75,32 @@ void LedRGB::colorPredefinido(String color){
 		ponerColor(255, 0, 255);
 	}
 }
+void LedRGB::defaultColor(String color){
+	_color = color;
+	if(_color == "white"){
+		ponerColor(255, 255, 255);
+	}else if(_color == "red"){
+		ponerColor(255, 0, 0);
+	}else if(_color == "green"){
+		ponerColor(0, 255, 0);
+	}else if(_color == "blue"){
+		ponerColor(0, 0, 255);
+	}else if(_color == "yellow"){
+		ponerColor(255, 255, 0);
+	}else if(_color == "orange"){
+		ponerColor(255, 150, 0);
+	}else if(_color == "violet"){
+		ponerColor(150, 0, 255);
+	}else if(_color == "turquoise"){
+		ponerColor(0, 255, 220);
+	}else if(_color == "grey"){
+		ponerColor(70, 70, 70);
+	}else if(_color == "maroon"){
+		ponerColor(176, 54, 72);
+	}else if(_color == "fuchsia"){
+		ponerColor(255, 0, 255);
+	}
+}
 
 void LedRGB::sumar(int sumR, int sumG, int sumB){
 	_sumR = sumR;
@@ -79,11 +108,18 @@ void LedRGB::sumar(int sumR, int sumG, int sumB){
 	_sumB = sumB;
 	ponerColor(_CR+_sumR, _CG+_sumG, _CB+_sumB);
 }
+void LedRGB::add(int addR, int addG, int addB){
+	sumar(addR, addG, addB);
+}
+
 void LedRGB::restar(int restR, int restG, int restB){
 	_restR = restR;
 	_restG = restG;
 	_restB = restB;
 	ponerColor(_CR-_restR, _CG-_restG, _CB-_restB);
+}
+void LedRGB::substract(int restR, int restG, int restB){
+	restar(restR, restG, restB);
 }
 
 void LedRGB::testear(){
@@ -97,8 +133,15 @@ void LedRGB::testear(){
 	delay(500);
 	ponerColor(0, 0, 0);
 }
+void LedRGB::test(){
+	testear();
+}
+
 void LedRGB::apagar(){
 	ponerColor(0, 0, 0);
+}
+void LedRGB::off(){
+	setColor(0, 0, 0);
 }
 
 void LedRGB::efectoFlash(int delON, int delOFF){
@@ -110,35 +153,11 @@ void LedRGB::efectoFlash(int delON, int delOFF){
 	delay(_delOFF);
 }
 
-/*
-void LedRGB::efectoFade(int fR, int fG, int fB){
-	_fR = fR;
-	_fG = fG;
-	_fB = fB;
-	for (int r = 0 ; r <= _fR; r++) {
-		_valR = r;
-  }
-	for (int g = 0 ; g <= _fG; g++) {
-		_valG = g;
-  }
-	for (int b = 0 ; b <= _fB; b++) {
-		_valB = b;
-  }
-  
-	for (int r = _fR ; r >= 0; r--) {
-		_valR = r;
-	}
-	for (int g = _fG ; g >= 0; g--) {
-		_valG = g;
-	}
-	for (int b = _fB ; b >= 0; b--) {
-		_valB = b;
-	}
-
-	ponerColor(_valR, _valG, _valB);
-	delay(15);
+void LedRGB::flashEffect(int delON, int delOFF){
+	efectoFlash(delON, delOFF);
 }
-*/
+
+
 void LedRGB::efectoFade(int fR, int fG, int fB){
 	_fR = fR;
 	_fG = fG;
@@ -156,22 +175,7 @@ void LedRGB::efectoFade(int fR, int fG, int fB){
 	ponerColor(_valR, _valG, _valB);
 	delay(15);
 }
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+void LedRGB::fadeEffect(int fR, int fG, int fB){
+	efectoFade(fR, fG, fB)
+}
