@@ -1,15 +1,17 @@
 # LedRGBlib - RGB LED Library for Arduino
 
 An easy-to-use library to control RGB LEDs with different effects in Arduino. To read the Engish tutorial, [click here](#English-tutorial).
+Also, if you want to contribute, [follow the instructions](#Contributing)
 
 Librería fácil de usar en español con efectos para controlar cualquier LED RGB en Arduino. Para leer el tutorial en español, [haz clic aquí](#Tutorial-en-español).
+Si deseas contribuir al proyecto, [sigue estas instrucciones](#Contribuir)
 
-# English tutorial
+# English tutorials
 ## How to use it
 This library is pretty easy to use, check out the following steps to set everything up.
 
 ### Initialize the library
-- First, you must download and install the library [as explained in the official page from Arduino](https://www.arduino.cc/en/Guide/Libraries)
+- First, you must download and install the library [as explained in the official page from Arduino](https://www.arduino.cc/en/Guide/Libraries).
 - In the first lines of your Arduino file, paste `#include <LedRGB.h>`.
 
 ### RGB LED object creation
@@ -26,13 +28,16 @@ We are using a custom object, named `LedRGB`. Next, we need to declare a new obj
 - `test();` makes a test of all three colors (300ms each, then 500ms white).
 - `flashEffect(timeOn, timeOff)` flashes once with the intervals specified in the parameters (milliseconds).
 
+## Contributing
+If you want to contribute to the library by adding new functions or improving the current ones, don't be afraid to create PRs with everything you would want to see! Also, if you think there are things we should improve, create a new issue.
 
-# Tutorial en español
+
+# Tutoriales en español
 ## Cómo usarla
 La utilización de la librería es muy sencilla, a continuación describimos los pasos necesarios.
 
 ### Inicialización de la librería
-- Debes descargar e instalar la librería [tal y como aparece en esta página oficial de Arduino](https://www.arduino.cc/en/Guide/Libraries)
+- Debes descargar e instalar la librería [tal y como aparece en esta página oficial de Arduino](https://www.arduino.cc/en/Guide/Libraries).
 - En las primeras líneas de tu programa, utiliza `#include <LedRGB.h>`.
 
 ### Creación del objeto para un LED RGB
@@ -48,3 +53,7 @@ El objeto que utilizaremos será de tipo `LedRGB`. A continuación deberemos def
 - `apagar();` pone todos los valores a cero.
 - `testear();` hace una prueba de los tres colores, encendiendo cada uno 300ms y después todos a la vez (blanco) durante 500ms.
 - `efectoFlash(tiempoOn, tiempoOff)` hace efecto de flash una vez con los parámetros dados en milisegundos.
+
+## Contribuir
+Si quieres contribuir a la librería añadiendo nuevas funciones o mejorando las actuales, no tienes más que crear PRs con todo lo que quieras ver en las nuevas versiones. Además, si encuentras errores o crees que hay cosas por mejorar, puedes crear un nuevo issue.
+
