@@ -22,26 +22,26 @@ void setup() {
 
 void loop() {
   // Using all available colors for "defaultColor"
-  miLED.defaultColor("white");
+  myLED.defaultColor("white");
   delay(300);
-  miLED.defaultColor("red");
+  myLED.defaultColor("red");
   delay(300);
-  miLED.defaultColor("green");
+  myLED.defaultColor("green");
   delay(300);
-  miLED.defaultColor("blue");
+  myLED.defaultColor("blue");
   delay(300);
-  miLED.defaultColor("yellow");
+  myLED.defaultColor("yellow");
   delay(300);
-  miLED.defaultColor("orange");
+  myLED.defaultColor("orange");
   delay(300);
-  miLED.defaultColor("violet");
+  myLED.defaultColor("violet");
   delay(300);
-  miLED.defaultColor("turquoise");
+  myLED.defaultColor("turquoise");
   delay(300);
-  miLED.defaultColor("grey");
+  myLED.defaultColor("grey");
   delay(300);
-  miLED.defaultColor("maroon");
+  myLED.defaultColor("maroon");
   delay(300);
-  miLED.defaultColor("fuchsia");
+  myLED.defaultColor("fuchsia");
   delay(300);
 }
