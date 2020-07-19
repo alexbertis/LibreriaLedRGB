@@ -23,7 +23,7 @@ We are using a custom object, named `LedRGB`. Next, we need to declare a new obj
 - `setColor(redValue, greenValue, blueValue);` sets the values from 0 to 255 for each of the three colors.
 - `defaultColor(colorName);` chooses among different color Strings, e.g. `"white"` or `"yellow"`. If the color you write is not supported, the LED will be set to black.
 - `add(addRed, addGreen, addBlue);` adds the specified value to the current one in the LED, up to 255.
-- `substract(subRed, subGreen, subBlue);` subtracts the specified value, all the way down to 0.
+- `subtract(subRed, subGreen, subBlue);` subtracts the specified value, all the way down to 0.
 - `off();` sets every value to 0.
 - `test();` makes a test of all three colors (300ms each, then 500ms white).
 - `flashEffect(timeOn, timeOff)` flashes once with the intervals specified in the parameters (milliseconds).

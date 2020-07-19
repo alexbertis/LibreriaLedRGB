@@ -122,7 +122,7 @@ void LedRGB::restar(int restR, int restG, int restB){
 	_restB = restB;
 	ponerColor(_CR-_restR, _CG-_restG, _CB-_restB);
 }
-void LedRGB::substract(int restR, int restG, int restB){
+void LedRGB::subtract(int restR, int restG, int restB){
 	restar(restR, restG, restB);
 }
 

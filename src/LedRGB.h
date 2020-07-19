@@ -24,7 +24,7 @@ class LedRGB
    void sumar(int sumR, int sumG, int sumB);
    void add(int addR, int addG, int addB);
    void restar(int restR, int restG, int restB);
-   void substract(int restR, int restG, int restB);
+   void subtract(int restR, int restG, int restB);
    void apagar();
    void off();
    void testear();
