@@ -6,7 +6,7 @@ Version 1.0.0
 */
 #ifndef LedRGB_h
 #define LedRGB_h
-#include <arduino.h>
+#include <Arduino.h>
 
 #define CA 0
 #define CC 1

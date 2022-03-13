@@ -5,7 +5,7 @@ Modified 22-06-2019
 Version 1.0.0
 */
 
-#include <arduino.h>
+#include <Arduino.h>
 #include <LedRGB.h>
 
 LedRGB::LedRGB(int pinR, int pinG, int pinB, int mode)
